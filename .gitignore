@@ -22,15 +22,13 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Go files (since this was a Go directory)
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-*.test
-*.out
-go.work
+# Node modules (if using npm for development tools)
+node_modules/
+package-lock.json
+
+# Environment variables (for sensitive API keys)
+.env
+.env.local
 
 # Editor directories and files
 .vscode/*
@@ -41,3 +39,14 @@ go.work
 *.njsproj
 *.sln
 *.sw?
+
+# Build and cache directories
+dist/
+build/
+.cache/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
