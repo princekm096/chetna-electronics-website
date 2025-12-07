@@ -31,6 +31,8 @@ chetna-electronics-website/
 ├── index.html              # Main HTML file
 ├── styles.css              # Stylesheet
 ├── script.js               # JavaScript functionality
+├── config.example.js       # EmailJS config template (committed)
+├── config.js               # EmailJS credentials (gitignored, create from example)
 ├── EMAIL_SETUP_GUIDE.md    # EmailJS configuration guide
 ├── .gitignore              # Git ignore file
 └── README.md               # Project documentation
@@ -47,9 +49,15 @@ chetna-electronics-website/
 2. **Configure EmailJS** (for contact form functionality)
    - Sign up for a free account at [EmailJS](https://www.emailjs.com/)
    - Create an email service and template
-   - Update the following placeholders in `script.js`:
-     - Line 56: Replace `'YOUR_PUBLIC_KEY'` with your EmailJS public key
-     - Line 83: Replace `'YOUR_SERVICE_ID'` and `'YOUR_TEMPLATE_ID'` with your IDs
+   - Copy the example config file and add your credentials:
+     ```bash
+     cp config.example.js config.js
+     ```
+   - Edit `config.js` and replace the placeholders with your actual EmailJS credentials:
+     - `publicKey`: Your EmailJS public key
+     - `serviceId`: Your EmailJS service ID
+     - `templateId`: Your EmailJS template ID
+   - **Important**: `config.js` is gitignored and will not be committed to version control
    - See `EMAIL_SETUP_GUIDE.md` for detailed instructions
 
 3. **Run the website**

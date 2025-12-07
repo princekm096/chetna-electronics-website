@@ -29,6 +29,7 @@ package-lock.json
 # Environment variables (for sensitive API keys)
 .env
 .env.local
+config.js
 
 # Editor directories and files
 .vscode/*

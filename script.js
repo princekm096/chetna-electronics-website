@@ -51,9 +51,9 @@ scrollTopBtn.addEventListener('click', () => {
 });
 
 // EmailJS Initialization
-// Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+// Credentials are loaded from config.js (which is gitignored)
 (function() {
-    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+    emailjs.init(EMAIL_CONFIG.publicKey);
 })();
 
 // Form Submission Handler with EmailJS
@@ -79,8 +79,8 @@ contactForm.addEventListener('submit', (e) => {
     };
 
     // Send email using EmailJS
-    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    // Credentials are loaded from config.js (which is gitignored)
+    emailjs.send(EMAIL_CONFIG.serviceId, EMAIL_CONFIG.templateId, templateParams)
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
 
